@@ -1,7 +1,8 @@
 version: "3.8"
+
 services:
   mysql:
-    image: mysql
+    image: mysql:8.0
     container_name: mytraining-mysql
     environment:
       MYSQL_ROOT_PASSWORD: Simple123
@@ -13,7 +14,9 @@ services:
       - ./my.cnf:/etc/mysql/conf.d/my.cnf
     networks:
       - node-network
+
 volumes:
   mysql-data:
+
 networks:
   node-network:
