@@ -10,6 +10,7 @@ services:
       - "3307:3306"
     volumes:
       - mysql-data:/var/lib/mysql
+      - ../mysql/conf/my.cnf:/etc/mysql/conf.d/my.cnf
     networks:
       - node-network
 volumes:
